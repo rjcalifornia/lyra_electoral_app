@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/lyra/app/Resources/views/layouts/topbar.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Inicio/dashboard.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/app/config/security.yml</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Entity/Departamento.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Procesos/procesados.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Form/DiputadoType.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/app/Resources/FOSUserBundle/views/Security/layout.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/app/Resources/views/layouts/sidebar.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Alcalde/agregar-acta-concejo.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Resultados/graficos.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/web/assets/vendors/chartjs/Chart.js</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Controller/DiputadoController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Entity/Jrv.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Entity/Centrovotacion.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Entity/Alcalde.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/web/assets/vendors/css/style.css</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Resultados/tabla.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Form/AlcaldeType.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/app/Resources/FOSUserBundle/views/layout.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/web/assets/vendors/chartjs/Chart.min.js</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Procesos/seleccion.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/app/config/routing.yml</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Controller/ProcesadasController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Diputado/agregar-acta.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/app/Resources/FOSUserBundle/views/Security/login_content.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/app/Resources/FOSUserBundle/views/Security/login.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Resultados/graficodiputado.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Entity/Diputado.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Controller/ResultadosDiputadoController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Controller/AlcaldeController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Resources/views/Resultados/tabladiputado.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra/src/AppBundle/Controller/ResultadosController.php</file>
+        </group>
+    </open-files>
+</project-private>

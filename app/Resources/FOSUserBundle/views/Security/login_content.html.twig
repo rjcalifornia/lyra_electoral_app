@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Lyra | Electoral App</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="{{ asset('assets/vendors/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="{{ asset('assets/vendors/node-waves/waves.css')}}" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{ asset('assets/vendors/animate-css/animate.css')}}" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{ asset('assets/vendors/css/style.css')}}" rel="stylesheet">
+</head>
+
+<body class="login-page">
+    <div class="login-box">
+        <center><img src="{{ asset('img/elections.png')}}" width="48" height="48" alt="LyraApp" /></center>
+        <div class="logo">
+            <a href="javascript:void(0);">Ly<b>ra</b></a>
+            <small>Electoral App</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                {% if error %}
+            <center><b style="color:#f5f6f5;">{{ error.messageKey|trans(error.messageData, 'security') }}</b></center>
+        {% endif %} 
+                <form id="sign_in" action="{{ path("fos_user_security_check") }}" method="POST">
+                     {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% endif %}
+                    <div class="msg">Ingrese sus credenciales para acceder</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="_username" placeholder="Usuario" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="_password" placeholder="Clave" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                       
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" type="submit" id="_submit" name="_submit">ENTRAR</button>
+                        </div>
+                    </div>
+                    <div class="row m-t-15 m-b--20">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="{{ asset('assets/vendors/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="{{ asset('assets/vendors/bootstrap/js/bootstrap.js')}}"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="{{ asset('assets/vendors/node-waves/waves.js')}}"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="{{ asset('assets/vendors/jquery-validation/jquery.validate.js')}}"></script>
+
+    <!-- Custom Js -->
+    <script src="{{ asset('assets/vendors/js/admin.js')}}"></script>
+    <script src="{{ asset('assets/vendors/js/pages/examples/sign-in.js')}}"></script>
+</body>
+
+</html>

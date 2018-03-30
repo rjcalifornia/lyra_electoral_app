@@ -1,0 +1,121 @@
+{# empty Twig template #}
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Welcome | Lyra Electoral App</title>
+    <!-- Favicon-->
+     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="{{ asset('assets/vendors/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+
+        <!-- Bootstrap Select Css -->
+    <link href="{{ asset('assets/vendors/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="{{ asset('assets/vendors/node-waves/waves.css')}}" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{ asset('assets/vendors/animate-css/animate.css')}}" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="{{ asset('assets/vendors/sweetalert/sweetalert.css')}}" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{ asset('assets/vendors/css/style.css')}}" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="{{ asset('assets/vendors/css/themes/all-themes.css')}}" rel="stylesheet" />
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+   
+    {% include 'layouts/topbar.html.twig' %}
+    <section>
+        
+       {% include 'layouts/sidebar.html.twig' %}
+    </section>
+
+    <section class="content">
+      
+        <div class="container-fluid">
+           
+  <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                         <div class="header">
+                <h2>CONSULTA DE JRV PROCESADAS</h2>
+            </div>
+            <!-- Widgets -->
+          
+                <div class="body">
+                    
+               {{form_start(seleccion)}}
+               
+                <label for="email_address">CENTRO DE VOTACION:</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        {{ form_widget(seleccion.centrovotacion) }}
+                                        
+                                    </div>
+                                </div>
+{{form_end(seleccion)}}
+                
+              </div>
+           
+            <!-- #END# Widgets -->
+           </div>
+            </div>
+         </div>
+        </div>
+    </section>
+
+   <!-- Jquery Core Js -->
+    <script src="{{ asset('assets/vendors/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="{{ asset('assets/vendors/bootstrap/js/bootstrap.js')}}"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="{{ asset('assets/vendors/bootstrap-select/js/bootstrap-select.js')}}"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="{{ asset('assets/vendors/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="{{ asset('assets/vendors/node-waves/waves.js')}}"></script>
+
+    <!-- Custom Js -->
+    <script src="{{ asset('assets/vendors/js/admin.js')}}"></script>
+
+    <!-- Demo Js -->
+    <script src="{{ asset('assets/vendors/js/demo.js')}}"></script>
+</body>
+
+</html>

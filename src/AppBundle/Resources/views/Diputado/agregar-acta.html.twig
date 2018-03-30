@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Agregar Acta | Lyra Electoral App</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="{{ asset('assets/vendors/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="{{ asset('assets/vendors/node-waves/waves.css')}}" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{ asset('assets/vendors/animate-css/animate.css')}}" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="{{ asset('assets/vendors/sweetalert/sweetalert.css')}}" rel="stylesheet" />
+    
+    <!-- Bootstrap Select Css -->
+    <link href="{{ asset('assets/vendors/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
+
+
+    <!-- Custom Css -->
+    <link href="{{ asset('assets/vendors/css/style.css')}}" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="{{ asset('assets/vendors/css/themes/all-themes.css')}}" rel="stylesheet" />
+    <script>
+    function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}</script>
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+      {% include 'layouts/topbar.html.twig' %}
+    <section>
+        {% include 'layouts/sidebar.html.twig' %}
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+           
+
+            <!-- Vertical Layout -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                AGREGAR RESULTADOS ACTA DIPUTADOS
+                            </h2>
+                          
+                        </div>
+                        
+                        
+                                
+                        
+                        <div class="body">
+                            {{ form_start(diputado) }}
+                            <label for="email_address">CENTRO DE VOTACION:</label>
+                            <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.centrovotacion) }}
+                                        
+                                    </div>
+                                </div>
+                                        
+                                        
+                             </br>
+                                <label for="email_address">NUMERO JRV</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.jrvnum) }}
+                                        
+                                    </div>
+                                </div>
+                                        
+                                         </br>    
+                                <label for="email_address">VOTOS SOBRANTES</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.sobrantes, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div>     
+                                    
+                                        
+                               
+                                        
+                                        
+                                </br>    
+                                <label for="email_address">INUTILIZADAS</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.inutilizadas, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                         </br>
+                               <label for="email_address">VOTOS ARENA</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.arena, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div>
+                                        
+                                        </br>
+                               <label for="email_address">VOTOS FMLN</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.fmln, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div>
+                                        
+                               </br>
+                               <label for="email_address">VOTOS GANA</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.gana, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div>    
+                                        
+                                        
+                                         </br>
+                               <label for="email_address">VOTOS PCN</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.pcn, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                        
+                                         </br>
+                               <label for="email_address">VOTOS PDC</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.pdc, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                </br>
+                               <label for="email_address">VOTOS CD</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.cd, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div>
+                                        
+                                        
+                                         </br>
+                               <label for="email_address">VOTOS PSD</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.psd, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                        
+                                    </br>
+                               <label for="email_address">VOTOS FPS</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.fps, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div>      
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                
+                                        
+                                 </br>    
+                                <label for="email_address">VOTOS CRUZADOS</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.cruzados, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                        
+                                        </br>    
+                                <label for="email_address">VOTOS IMPUGNADOS</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.impugnados, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                        
+                                         </br>    
+                                <label for="email_address">VOTOS NULOS</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.nulo, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                        
+                                        
+                                </br>
+                               <label for="email_address">ABSTENCIONES</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.abstenciones, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                    
+                                        </br>
+                               <label for="email_address">ESCRUTADOS</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.escrutados, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                         </br>    
+                                <label for="email_address">VOTOS FALTANTES</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.faltantes, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div>
+                                        
+                                        
+                               
+                                        
+                               
+                                        
+                                        </br>    
+                                <label for="email_address">ENTREGADOS</label>
+                                <div class="form-group">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.entregados, { 'type':'number' }) }}
+                                        
+                                    </div>
+                                </div> 
+                                        
+                                      
+                                        
+                                     </br>    
+                                
+                                <div class="form-group" style="display: none;">
+                                    <div class="form-line" onkeypress='validate(event)'>
+                                        {{ form_widget(diputado.municipioid, {value : '1'}) }}
+                                        
+                                    </div>
+                                </div>   
+                                        
+                                        
+                                
+                                        
+                                <br>
+                                {{ form_widget(diputado.guardar) }}
+                               
+                            {{ form_end(diputado) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Vertical Layout -->
+  
+            
+           
+          
+           
+          
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="{{ asset('assets/vendors/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="{{ asset('assets/vendors/bootstrap/js/bootstrap.js')}}"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="{{ asset('assets/vendors/bootstrap-select/js/bootstrap-select.js')}}"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="{{ asset('assets/vendors/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="{{ asset('assets/vendors/node-waves/waves.js')}}"></script>
+
+    <!-- Custom Js -->
+    <script src="{{ asset('assets/vendors/js/admin.js')}}"></script>
+
+    <!-- Demo Js -->
+    <script src="{{ asset('assets/vendors/js/demo.js')}}"></script>
+</body>
+
+</html>

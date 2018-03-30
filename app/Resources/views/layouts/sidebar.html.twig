@@ -1,0 +1,105 @@
+<!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    
+                </div>
+                <div class="info-container">
+                  
+                   
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MENU PRINCIPAL</li>
+                    
+                    <li class="active">
+                        <a href="{{ path('homepage')}}">
+                            <i class="material-icons">home</i>
+                            <span>Agregar Actas</span>
+                        </a>
+                    </li>
+                   {#<li>
+                        <a href="pages/typography.html">
+                            <i class="material-icons">text_fields</i>
+                            <span>Ver Actas Concejos Municipales</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/helper-classes.html">
+                            <i class="material-icons">layers</i>
+                            <span>Ver Actas Diputados</span>
+                        </a>
+                    </li>#}
+                   {%if is_granted('ROLE_REPORTE') or is_granted('ROLE_ADMIN')%}
+                    <li>
+                        <a href="{{path('ver_resultados_concejo')}}">
+                            <i class="material-icons">equalizer</i>
+                            <span>Gráfico Resultados Alcalde</span>
+                        </a>
+                     
+                    </li>
+                    
+                    <li>
+                        <a href="{{path('ver_resultados_concejo_tabla')}}">
+                            <i class="material-icons">widgets</i>
+                            <span>Tabla Resultados Alcalde</span>
+                        </a>
+                     
+                    </li>
+                    
+                    
+                     <li>
+                        <a href="{{path('ver_resultados_diputado')}}">
+                            <i class="material-icons">equalizer</i>
+                            <span>Gráfico Resutados Diputados</span>
+                        </a>
+                     
+                    </li>
+                    
+                    <li>
+                        <a href="{{path('ver_resultados_diputado_tabla')}}">
+                            <i class="material-icons">verified_user</i>
+                            <span>Tabla Resultados Diputados</span>
+                        </a>
+                     
+                    </li>
+                    
+                    <li>
+                        <a href="{{path('jrv_seleccion')}}">
+                            <i class="material-icons">important_devices</i>
+                            <span>Reporte de Transmision</span>
+                        </a>
+                     
+                    </li>
+                    
+                    
+                    
+                    
+                   {%endif%}
+                    
+                    <li>
+                        <a href="{{ path('fos_user_security_logout')}}">
+                            <i class="material-icons">swap_calls</i>
+                            <span>Salir</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2018 - 2021 <a href="javascript:void(0);">Lyra Electoral App</a>
+                </div>
+                <div class="version">
+                    <b>Version: </b> 02.10.18
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
